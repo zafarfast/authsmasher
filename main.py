@@ -165,6 +165,7 @@ def main():
             try:
                 with open("report.txt", 'w') as file:
                     file.write(auth_smasher_report)
+                    file.write(f"Password Brute-Force Report")
                     file.write(f"\nDate: {datetime.now().date()}")
                     file.write(f"\nTime: {datetime.now().time()}\n\n")
 
@@ -221,6 +222,7 @@ A password is found
                         
                         print(f"Status code received {response.status_code}")
                         print(f"Header length {headers_length}\n")
+            print(colored('Check reports.txt file for results'), 'cyan')
                         
 
     # -------------------------------------------SQL INJECTION------------------------------------------------
@@ -316,7 +318,16 @@ A password is found
                             # Remove the newline character at the end of each line
                             line = line.strip()
                             injections.append(line)
-            
+            try:
+                with open("report.txt", 'w') as file:
+                    file.write(auth_smasher_report)
+                    file.write(f"SQL Injection Report")
+                    file.write(f"\nDate: {datetime.now().date()}")
+                    file.write(f"\nTime: {datetime.now().time()}\n\n")
+
+            except file.errors as e:
+                print(e)
+
             for i in range(0, len(injections)):
                 sleep(1)
                 data[payload_splitted[0].split('=')[0]]=injections[i]
@@ -338,7 +349,19 @@ A password is found
                         print(colored(f'Success', 'green'))
                         print(f"Status code received {response.status_code}")
                         print(f"Header length {headers_length}\n")
+                        try:
+                            with open("report.txt", 'a') as file:
+                                file.write(f'-------------------------------------\n')
+                                file.write(f'{injections[i]}       |       Success\n')
+                        except file.errors as e:
+                            print(e)
                     else:
+                        try:
+                            with open("report.txt", 'a') as file:
+                                file.write(f'-------------------------------------\n')
+                                file.write(f'{injections[i]}       |       Failed\n')
+                        except file.errors as e:
+                            print(e)
                         print(colored(f'Failed', 'red'))
                         print(f"Status code received {response.status_code}")
                         print(f"Header length {headers_length}\n")
@@ -363,7 +386,19 @@ A password is found
                         print(colored(f'Success', 'green'))
                         print(f"Status code received {response.status_code}")
                         print(f"Header length {headers_length}\n")
+                        try:
+                            with open("report.txt", 'a') as file:
+                                file.write(f'-------------------------------------\n')
+                                file.write(f'{injections[i]}       |       Success\n')
+                        except file.errors as e:
+                            print(e)
                     else:
+                        try:
+                            with open("report.txt", 'a') as file:
+                                file.write(f'-------------------------------------\n')
+                                file.write(f'{injections[i]}       |       Failed\n')
+                        except file.errors as e:
+                            print(e)
                         print(colored(f'Failed', 'red'))
                         print(f"Status code received {response.status_code}")
                         print(f"Header length {headers_length}\n")
