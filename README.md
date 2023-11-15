@@ -20,5 +20,35 @@ Auth Smasher is a penetration testing tool available as open-source software. It
 * twilio
 * datetime
 
-  
+## Installation
 
+Download and install the latest version of Python (https://www.python.org/downloads/)
+
+Clone the repository to your computer by typing the following commands on your shell,
+
+`git clone https://github.com/zafarfast/authsmasher.git`
+
+`cd authsmasher`
+
+`pip install requests termcolor twilio`
+
+## SMS notification feature
+
+If you wish to use the SMS authentication feature, register and create account on Twilio. (https://www.twilio.com/try-twilio). 
+
+You will get the following after registering a trial account on Twilio,
+
+* SID
+* Token
+* Account mobile number
+* Limited free messages
+
+Once you have the above, open main.py file and copy their values in the variables below,
+
+`account_sid = "" `
+
+`auth_token = "" `
+
+`USER_PHONE_NUMBER = ""`
+
+`TWILIO_ACCOUNT_MOBILE_NUMBER = ""#Enter the Twilio account mobile number here`
