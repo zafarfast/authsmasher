@@ -5,6 +5,8 @@ from time import sleep
 from twilio.rest import Client #import twilio Client module
 from datetime import datetime
 
+
+
 auth_smasher_logo = '''
 
     ___         __  __       _____                      __             
@@ -26,7 +28,8 @@ auth_smasher_report = '''
 '''
 account_sid = "" #add your Twilio account SID here
 auth_token = "" #add your Twilio account token here
-client = Client(account_sid, auth_token)
+if account_sid != "" and auth_token != "":
+    client = Client(account_sid, auth_token)
 USER_PHONE_NUMBER = "" #Enter the mobile number where you want to receive the notifications
 TWILIO_ACCOUNT_MOBILE_NUMBER = ""#Enter the Twilio account mobile number here
 
