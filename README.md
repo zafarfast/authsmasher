@@ -30,7 +30,13 @@ Clone the repository to your computer by typing the following commands on your s
 
 `cd authsmasher`
 
-`pip install requests termcolor twilio`
+`pip3 install requests termcolor twilio` or `pip install requests termcolor twilio`
+
+## Run the program
+
+To run the app, type the following command in your shell,
+
+`python3 main.py` or `python main.py`
 
 ## SMS notification feature
 
@@ -52,3 +58,7 @@ Once you have the above, open main.py file and copy their values in the variable
 `USER_PHONE_NUMBER = ""`
 
 `TWILIO_ACCOUNT_MOBILE_NUMBER = ""#Enter the Twilio account mobile number here`
+
+## Report feature
+
+All the password and SQL injections attempts are recorded in report.txt file.
