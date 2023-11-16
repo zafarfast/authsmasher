@@ -34,7 +34,7 @@ Clone the repository to your computer by typing the following commands on your s
 
 ## SMS notification feature
 
-If you wish to use the SMS authentication feature, register and create account on Twilio. (https://www.twilio.com/try-twilio). 
+If you wish to use the SMS notification feature, register and create account on Twilio. (https://www.twilio.com/try-twilio). 
 
 You will get the following after registering a trial account on Twilio,
 
