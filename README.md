@@ -9,7 +9,7 @@ Auth Smasher is a penetration testing tool available as open-source software. It
 ## Requirements
 
 * Python
-* pip packaga installer
+* pip package installer
 
 ## Python modules required
 
